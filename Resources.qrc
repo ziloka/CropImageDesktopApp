@@ -1,11 +1,12 @@
 <RCC>
     <qresource prefix="/imgs">
-        <file>Copy.bmp</file>
-        <file>Cut.bmp</file>
-        <file>DeleteSticky.bmp</file>
-        <file>New.bmp</file>
-        <file>Open.bmp</file>
-        <file>Paste.bmp</file>
-        <file>Save.bmp</file>
+        <file>assets/Copy.bmp</file>
+        <file>assets/Cut.bmp</file>
+        <file>assets/DeleteSticky.bmp</file>
+        <file>assets/New.bmp</file>
+        <file>assets/Open.bmp</file>
+        <file>assets/Paste.bmp</file>
+        <file>assets/Save.bmp</file>
+        <file>assets/Sticky.bmp</file>
     </qresource>
 </RCC>

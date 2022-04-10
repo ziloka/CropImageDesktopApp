@@ -6,28 +6,36 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1686</width>
+    <height>953</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
+   <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>10</y>
-      <width>661</width>
-      <height>511</height>
+      <x>5</x>
+      <y>1</y>
+      <width>401</width>
+      <height>921</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QTextEdit" name="textEdit"/>
-     </item>
-    </layout>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>-30</y>
+      <width>1341</width>
+      <height>951</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -35,7 +43,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1686</width>
      <height>25</height>
     </rect>
    </property>
@@ -43,7 +51,6 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionNew"/>
     <addaction name="actionOpen"/>
     <addaction name="actionSave_as"/>
     <addaction name="actionPrint"/>
@@ -63,18 +70,9 @@
    <addaction name="menuEdit"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionNew">
-   <property name="icon">
-    <iconset resource="Resources.qrc">
-     <normaloff>:/imgs/New.bmp</normaloff>:/imgs/New.bmp</iconset>
-   </property>
-   <property name="text">
-    <string>New</string>
-   </property>
-  </action>
   <action name="actionOpen">
    <property name="icon">
-    <iconset resource="Resources.qrc">
+    <iconset>
      <normaloff>:/imgs/Open.bmp</normaloff>:/imgs/Open.bmp</iconset>
    </property>
    <property name="text">
@@ -83,7 +81,7 @@
   </action>
   <action name="actionSave_as">
    <property name="icon">
-    <iconset resource="Resources.qrc">
+    <iconset>
      <normaloff>:/imgs/Save.bmp</normaloff>:/imgs/Save.bmp</iconset>
    </property>
    <property name="text">
@@ -94,40 +92,59 @@
    <property name="text">
     <string>Print</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
   </action>
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
    </property>
   </action>
   <action name="actionCopy">
    <property name="text">
     <string>Copy</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
   </action>
   <action name="actionPaste">
    <property name="text">
     <string>Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
    </property>
   </action>
   <action name="actionCut">
    <property name="text">
     <string>Cut</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
   </action>
   <action name="actionUndo">
    <property name="text">
     <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
    </property>
   </action>
   <action name="actionRedo">
    <property name="text">
     <string>Redo</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
   </action>
  </widget>
- <resources>
-  <include location="Resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
