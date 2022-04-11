@@ -1,6 +1,3 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-
 #include <QMainWindow>
 #include <QFile>
 #include <QFileDialog>
@@ -9,6 +6,10 @@
 #include <QPrinter>
 #include <QPrintDialog>
 #include <QListWidgetItem>
+
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+#endif
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,9 +30,8 @@ private slots:
 //    void onFileExplorerFileClicked();
     void on_listWidget_itemClicked(QListWidgetItem *item);
 
-private:
+public:
     Ui::MainWindow *ui;
     QString currentFile = "";
     QString currentDirectory = "";
 };
-#endif // MAINWINDOW_H

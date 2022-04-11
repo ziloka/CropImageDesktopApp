@@ -1,6 +1,7 @@
 #ifndef IMAGECROPPERSCENE_HPP
 #define IMAGECROPPERSCENE_HPP
 
+#include "qwidget.h"
 #endif // IMAGECROPPERSCENE_HPP
 
 #include <vector>
@@ -15,7 +16,7 @@ class ImageCropperScene : public QGraphicsScene {
     QGraphicsLineItem *item;
 
     public:
-        ImageCropperScene(QObject *parent = nullptr, QPixmap *image = nullptr);
+        ImageCropperScene(QObject *parent = nullptr, QString filePath = "");
         ~ImageCropperScene();
     signals:
     public slots:
@@ -24,7 +25,7 @@ class ImageCropperScene : public QGraphicsScene {
         void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent);
         void mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent);
     private:
-        QPixmap *image;
+        QString imageFilePath;
         int clickMousePosition[2];
         int releaseMousePosition[2];
 };

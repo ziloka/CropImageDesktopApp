@@ -29,22 +29,22 @@ void MainWindow::on_actionOpen_triggered()
 }
 
 void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item) {
-    QString fileName = currentDirectory + QDir::separator() + (item -> text());
+    QString filePath = currentDirectory + QDir::separator() + (item -> text());
     // load the image
     // https://forum.qt.io/topic/130073/view-an-image-on-qgraphicsview-from-resources
-    QPixmap p(fileName);
-    if (! ui->graphicsView->scene()) {
+    QPixmap image(filePath);
+    if (!ui->graphicsView->scene()) {
         // create a scene because there is no scene
         qDebug() << "No Scene!";
 
-        ImageCropperScene *scene = new ImageCropperScene(this, &p);
+        ImageCropperScene *scene = new ImageCropperScene(this, filePath);
         ui->graphicsView->setScene(scene);
     } else {
         // clear the scene because the user already loaded an image
         ui->graphicsView->scene()->clear();
     }
 
-    ui->graphicsView->scene()->addPixmap(p);
+    ui->graphicsView->scene()->addPixmap(image);
 
     // https://stackoverflow.com/questions/17028680/qt5-c-qgraphicsview-images-dont-fit-view-frame
     // https://stackoverflow.com/a/17085612
