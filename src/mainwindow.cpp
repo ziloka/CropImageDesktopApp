@@ -45,6 +45,7 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item) {
     }
 
     ui->graphicsView->scene()->addPixmap(p);
+
     // https://stackoverflow.com/questions/17028680/qt5-c-qgraphicsview-images-dont-fit-view-frame
     // https://stackoverflow.com/a/17085612
     ui->graphicsView->fitInView(ui->graphicsView->scene()->sceneRect(), Qt::KeepAspectRatio);

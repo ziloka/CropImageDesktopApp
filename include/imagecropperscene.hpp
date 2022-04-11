@@ -12,6 +12,8 @@
 
 class ImageCropperScene : public QGraphicsScene {
     Q_OBJECT
+    QGraphicsLineItem *item;
+
     public:
         ImageCropperScene(QObject *parent = nullptr, QPixmap *image = nullptr);
         ~ImageCropperScene();
@@ -19,6 +21,7 @@ class ImageCropperScene : public QGraphicsScene {
     public slots:
     protected:
         void mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent);
+        void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent);
         void mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent);
     private:
         QPixmap *image;
