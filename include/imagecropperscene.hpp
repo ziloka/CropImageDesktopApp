@@ -5,8 +5,6 @@
 #include <QGraphicsScene>
 #include <QGraphicsSceneEvent>
 
-#include "qwidget.h"
-
 // https://www.qtcentre.org/threads/38990-Graphics-View-mouse-events
 
 class ImageCropperScene : public QGraphicsScene {
