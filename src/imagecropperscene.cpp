@@ -5,6 +5,7 @@
 #include "include/mainwindow.hpp"
 #include "include/imagecropperscene.hpp"
 #include "qdebug.h"
+#include "qpainter.h"
 
 #include <cmath>
 
@@ -29,12 +30,31 @@ void ImageCropperScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent) {
     item -> setLine(l);
 }
 
-void ImageCropperScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent) {
-    const QPointF p = item -> mapFromScene(mouseEvent -> scenePos());
-    QLineF l = item -> line();
-    l.setP2(p);
-    item->setLine(l);
-}
+//void ImageCropperScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent) {
+//    // capture mouse position on movement
+//    const QPointF p = item -> mapFromScene(mouseEvent -> scenePos());
+//    QLineF l = item -> line();
+//    l.setP2(p);
+//    item->setLine(l);
+
+//    double xPos1 = item -> line().p1().x();
+//    double xPos2 = item -> line().p2().x();
+//    double yPos1 = item -> line().p1().y();
+//    double yPos2 = item -> line().p2().y();
+
+//    // Draw rectangle for capture
+//    QGraphicsRectItem rectItem(
+//        fmin(xPos1, xPos2),
+//        fmin(yPos1, yPos2),
+//        abs(xPos1-xPos2),
+//        abs(yPos1-yPos2),
+//        item
+//    );
+
+//    QPainter painter{};
+//    QStyleOptionGraphicsItem styleOptionGraphicsItem;
+//    rectItem.paint(&painter, &styleOptionGraphicsItem);
+//}
 
 void ImageCropperScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent) {
     QPixmap image(this->imageFilePath);
