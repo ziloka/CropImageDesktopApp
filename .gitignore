@@ -1,1 +1,7 @@
 build*
+.qtc_clangd
+debug
+release
+.qmake.stash
+Makefile.Debug
+Makefile.Release

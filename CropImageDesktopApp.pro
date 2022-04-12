@@ -16,7 +16,7 @@ SOURCES += \
 HEADERS += \
     include/imagecropperscene.hpp \
     include/mainwindow.hpp \
-    include//custompainter.hpp
+    include/custompainter.hpp
 
 FORMS += \
     mainwindow.ui

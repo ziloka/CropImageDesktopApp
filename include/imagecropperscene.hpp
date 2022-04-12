@@ -1,13 +1,11 @@
 #ifndef IMAGECROPPERSCENE_HPP
 #define IMAGECROPPERSCENE_HPP
 
-
-#endif // IMAGECROPPERSCENE_HPP
-
 #include <vector>
-#include "qwidget.h"
 #include <QGraphicsScene>
 #include <QGraphicsSceneEvent>
+
+#include "qwidget.h"
 
 // https://www.qtcentre.org/threads/38990-Graphics-View-mouse-events
 
@@ -22,8 +20,9 @@ class ImageCropperScene : public QGraphicsScene {
     public slots:
     protected:
         void mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent);
-//        void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent);
         void mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent);
     private:
         QString imageFilePath;
 };
+
+#endif // IMAGECROPPERSCENE_HPP

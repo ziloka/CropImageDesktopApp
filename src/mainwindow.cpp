@@ -6,6 +6,7 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
+    setMouseTracking(false);
 }
 
 MainWindow::~MainWindow() {
@@ -20,7 +21,6 @@ void MainWindow::on_actionOpen_triggered() {
     currentDirectory = folder;
     // clear items in listWidget
     ui -> listWidget -> clear();
-    QStringList supportedImageExtensions = { "*.jpg", "*.webp", "*.png"};
     QStringList images = directory.entryList(QStringList() << "*.jpg" << "*.JPG" << "*.jpeg" << ".JPEG" << "*.png" << "*.PNG" << "*.webp" << "*.WEPB", QDir::Files);
     for (int i = 0; i < images.length(); i++) {
         ui -> listWidget -> insertItem(i, images.at(i));
@@ -32,12 +32,14 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item) {
     // load the image
     // https://forum.qt.io/topic/130073/view-an-image-on-qgraphicsview-from-resources
     QPixmap image(filePath);
-//    if (ui->graphicsView->scene()) ui->graphicsView->scene()->clear();
+    if (ui->graphicsView->scene()) ui->graphicsView->scene()->clear();
 
     ImageCropperScene *scene = new ImageCropperScene(this, filePath);
     ui->graphicsView->setScene(scene);
 
     ui->graphicsView->scene()->addPixmap(image);
+    // https://forum.qt.io/topic/9652/solved-drawing-on-top-of-an-image/5
+    ui->graphicsView->setDragMode(QGraphicsView::RubberBandDrag);
 
     // https://stackoverflow.com/questions/17028680/qt5-c-qgraphicsview-images-dont-fit-view-frame
     // https://stackoverflow.com/a/17085612
