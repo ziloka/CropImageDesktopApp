@@ -30,7 +30,8 @@ class MainWindow : public QMainWindow {
 //        void onFileExplorerFileClicked();
         void on_listWidget_itemClicked(QListWidgetItem *item);
 
-    public:
+
+public:
         Ui::MainWindow *ui;
         QString currentFile = "";
         QString currentDirectory = QDir::currentPath();
