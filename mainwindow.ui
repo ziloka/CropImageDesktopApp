@@ -6,31 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1686</width>
-    <height>953</height>
+    <width>1589</width>
+    <height>932</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>5</x>
+      <x>1</x>
       <y>1</y>
-      <width>401</width>
-      <height>921</height>
+      <width>351</width>
+      <height>841</height>
      </rect>
     </property>
    </widget>
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>170</y>
-      <width>1281</width>
-      <height>341</height>
+      <x>350</x>
+      <y>0</y>
+      <width>451</width>
+      <height>841</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -46,7 +49,7 @@
      <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
     <property name="horizontalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOn</enum>
+     <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
     <property name="sizeAdjustPolicy">
      <enum>QAbstractScrollArea::AdjustIgnored</enum>
@@ -55,13 +58,36 @@
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>840</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Crop</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsViewResult">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>0</y>
+      <width>791</width>
+      <height>841</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1686</width>
+     <width>1589</width>
      <height>25</height>
     </rect>
    </property>

@@ -3,7 +3,6 @@
 #include <QFileDialog>
 #include <QTextStream>
 #include <QMessageBox>
-#include <QPrinter>
 #include <QPrintDialog>
 #include <QListWidgetItem>
 
@@ -30,6 +29,8 @@ class MainWindow : public QMainWindow {
 //        void onFileExplorerFileClicked();
         void on_listWidget_itemClicked(QListWidgetItem *item);
 
+
+        void on_pushButton_clicked();
 
 public:
         Ui::MainWindow *ui;
