@@ -1,3 +1,5 @@
+#include "qgraphicsitem.h"
+#include "resizablerectitem.hpp"
 #include <QMainWindow>
 #include <QFile>
 #include <QFileDialog>
@@ -21,16 +23,19 @@ class MainWindow : public QMainWindow {
     public:
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
-
+    private:
+        QGraphicsPixmapItem* getImageFromScene();
+        ResizableRectItem* getRectItemFromScene();
     private slots:
-//        void onOpen();
         void on_actionOpen_triggered();
 
-//        void onFileExplorerFileClicked();
         void on_listWidget_itemClicked(QListWidgetItem *item);
 
+        void on_cropButton_clicked();
 
-        void on_pushButton_clicked();
+        void on_changeSizeSubmit_clicked();
+
+        void on_imageSizeSubmit_clicked();
 
 public:
         Ui::MainWindow *ui;

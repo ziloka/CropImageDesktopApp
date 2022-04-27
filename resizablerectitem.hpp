@@ -6,6 +6,7 @@
 #include <QGraphicsRectItem>
 #include <QPen>
 #include <QBrush>
+#include <QGraphicsSceneMouseEvent>
 
 class ResizableRectItemSettings;
 
@@ -13,7 +14,6 @@ class ResizableRectItem : public QGraphicsRectItem
 {
 public:
     ResizableRectItem(QRectF rect, const ResizableRectItemSettings *settings, QGraphicsItem *parent = 0);
-
 private:
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
