@@ -60,7 +60,8 @@ void ResizableRectItem::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     // If not a resize event, pass it to base class so move event can be implemented.
     if (!resizeDirections.any()) {
-        QGraphicsRectItem::mouseMoveEvent(event);
+        this->update();
+         QGraphicsRectItem::mouseMoveEvent(event);
     } else {
         resizeRect(event);
     }
@@ -78,12 +79,14 @@ void ResizableRectItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 
 void ResizableRectItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
+
     QGraphicsRectItem::paint(painter, option, widget);
 
-    // We draw the inner-rect after main rect.
-    // Drawing order matters if alpha-transparency is used.
     const QPen &oldPen = painter->pen();
     const QBrush &oldBrush = painter->brush();
+
+    // We draw the inner-rect after main rect.
+    // Drawing order matters if alpha-transparency is used.   
     painter->setPen(settings->innerRectPen);
     painter->setBrush(settings->innerRectBrush);
     painter->drawRect(getInnerRect());

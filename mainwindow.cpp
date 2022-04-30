@@ -72,12 +72,12 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item) {
 //    ui->graphicsView->setFixedWidth(image.width());
 //    ui->graphicsView->setFixedHeight(image.height());
     // https://github.com/sashoalm/ResizableRectItem#sample-usage
-    QBrush brush(QColor(255, 0, 0, 255/3));
+    QBrush brush(QColor(0, 0, 0, 0));
     ResizableRectItemSettings *settings = new ResizableRectItemSettings(
-        1,
+        10,
         QSizeF(30, 30),
         QSizeF(image.width(), image.height()),
-        Qt::DashLine,
+        Qt::NoPen,
         brush
     );
 
@@ -96,6 +96,12 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item) {
     );
 
     interactiveRectangle->setBrush(brush);
+    QPen pen;
+    pen.setStyle(Qt::DashLine);
+    pen.setWidth(0);
+    pen.setColor(QColor(255,255,255));
+    interactiveRectangle->setPen(pen);
+
     interactiveRectangle->setFlag(QGraphicsItem::ItemIsMovable);
     //interactiveRectangle->setParentItem(getImageFromScene());
 
@@ -196,6 +202,8 @@ void MainWindow::on_imageSizeSubmit_clicked()
     static QRegularExpression re("\\d+", QRegularExpression::CaseInsensitiveOption);
 
     ResizableRectItem *rectItem = getRectItemFromScene();
+//    ui->imageDropDown->addItem()
+    ui->imageDropDown->currentData();
     QString choiceText = ui -> imageDropDown -> currentText();
     QRegularExpressionMatchIterator matches = re.globalMatch(choiceText);
 

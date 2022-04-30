@@ -128,6 +128,9 @@
       <height>28</height>
      </rect>
     </property>
+    <property name="currentText">
+     <string notr="true">FaceBook 170x170 </string>
+    </property>
     <item>
      <property name="text">
       <string>FaceBook 170x170 </string>
