@@ -1,16 +1,18 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { FileViewer, ImageViewer } from './App'
 import reportWebVitals from './reportWebVitals';
+import './index.css';
+import { Container } from 'react-bootstrap';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Container>
+    <FileViewer></FileViewer>
+    <ImageViewer></ImageViewer>
+  </Container>
 );
 
 // If you want to start measuring performance in your app, pass a function
