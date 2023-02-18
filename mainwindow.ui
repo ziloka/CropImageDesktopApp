@@ -17,193 +17,163 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>1</x>
-      <y>1</y>
-      <width>351</width>
-      <height>841</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="graphicsView">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
+      <x>0</x>
       <y>0</y>
-      <width>451</width>
-      <height>841</height>
+      <width>1581</width>
+      <height>871</height>
      </rect>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="verticalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
-    </property>
-    <property name="horizontalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
-    </property>
-    <property name="sizeAdjustPolicy">
-     <enum>QAbstractScrollArea::AdjustIgnored</enum>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="cropButton">
-    <property name="geometry">
-     <rect>
-      <x>1190</x>
-      <y>850</y>
-      <width>83</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Crop</string>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="graphicsViewResult">
-    <property name="geometry">
-     <rect>
-      <x>800</x>
-      <y>0</y>
-      <width>791</width>
-      <height>841</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="changeSizeSubmit">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>850</y>
-      <width>83</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Change Size</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="percentageDropdown">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>850</y>
-      <width>82</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>25%</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>50%</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>75%</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QComboBox" name="imageDropDown">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>850</y>
-      <width>171</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="currentText">
-     <string notr="true">FaceBook 170x170 </string>
-    </property>
-    <item>
-     <property name="text">
-      <string>FaceBook 170x170 </string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Cover Photo: 820 x 312</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Profile Picture: 110 x 110</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Photo Thumbnail: 161 x 161</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Photo Size: 1080 x 1080</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Instagram Story: 1080 1920</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Shared Image: 1200 x 630</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Shared link: 1200 x 628</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Event Image: 1920 x 1005</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Fundraiser image: 800 x 300</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Profile Photo: 400 x 400</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Header Photo: 1500 x 500</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QPushButton" name="imageSizeSubmit">
-    <property name="geometry">
-     <rect>
-      <x>710</x>
-      <y>850</y>
-      <width>83</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Change Size</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalContainer">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QListWidget" name="listWidget"/>
+       </item>
+       <item>
+        <widget class="QGraphicsView" name="graphicsView">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustIgnored</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGraphicsView" name="graphicsViewResult"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QComboBox" name="percentageDropdown">
+         <item>
+          <property name="text">
+           <string>25%</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>50%</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>75%</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="changeSizeSubmit">
+         <property name="text">
+          <string>Change Size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="imageDropDown">
+         <property name="currentText">
+          <string notr="true">FaceBook 170x170 </string>
+         </property>
+         <item>
+          <property name="text">
+           <string>FaceBook 170x170 </string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Cover Photo: 820 x 312</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Profile Picture: 110 x 110</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Photo Thumbnail: 161 x 161</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Photo Size: 1080 x 1080</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Instagram Story: 1080 1920</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Shared Image: 1200 x 630</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Shared link: 1200 x 628</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Event Image: 1920 x 1005</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fundraiser image: 800 x 300</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Profile Photo: 400 x 400</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Header Photo: 1500 x 500</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="imageSizeSubmit">
+         <property name="text">
+          <string>Change Size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cropButton">
+         <property name="text">
+          <string>Crop</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -212,7 +182,7 @@
      <x>0</x>
      <y>0</y>
      <width>1589</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
